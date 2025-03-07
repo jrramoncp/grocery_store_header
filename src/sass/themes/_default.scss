@@ -6,9 +6,11 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem;
+    padding-right: 1rem;
     position: relative;
     max-width: $mobile-max-width;
     font-family: $poppins-font;
+    color: $black-color;
     @include breakpoint(tablet){
         max-width: $tablet-max-width;
     }
