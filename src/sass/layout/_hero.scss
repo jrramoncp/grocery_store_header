@@ -24,6 +24,13 @@
             max-width: 100%;
             display: flex;
             justify-content: center;
+
+            @include breakpoint(tablet){
+                width: 80%;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
             input{
                 max-width: 80%;
                 padding: 10px;
@@ -45,15 +52,50 @@
             }
     
         }
+
+        .hero_list{
+            ul{
+                list-style-type: none;
+                
+                @include breakpoint(tablet){
+                    max-width: 80%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                }
+
+                li{
+                    font-size: 18px;
+                    background-image: url(img/check-icon.svg);
+                    background-repeat: no-repeat;
+                    background-size:14px ;
+                    background-position: center left;
+                    padding-left: 1.2rem;
+                    @include breakpoint(tablet){
+                        margin-right: 2em;
+                    }
+                }
+            }
+        }
     }
 
     .hero_img{
         max-width: 100%;
         margin-left: auto;
         margin-right: auto;
+        @include breakpoint(tablet){
+            display: flex;
+            justify-content: center;
+        }
 
         img{
             max-width: 100%;
+            @include breakpoint(tablet){
+                max-width: 60%;
+            }
         }
     }
     

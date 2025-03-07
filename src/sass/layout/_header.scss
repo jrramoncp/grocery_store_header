@@ -6,10 +6,23 @@
     justify-content: space-between;
     align-items: baseline;
     position: relative;
+    
+    @include breakpoint(tablet){
+        justify-content: space-between;
+        .nav-toggle{
+            position: relative;
+            left: 18%;
+            top: 1px;
+
+        }
+    }
 
     // header img
     img{
         max-width: 150px;
+        @include breakpoint(tablet){
+           max-width: 200px;
+        }
     }
 
     //input buttons 
@@ -53,6 +66,9 @@
                 }
             }
 
+            @include breakpoint(tablet){
+                right: -0.5rem;
+            }
         }
     }
 }

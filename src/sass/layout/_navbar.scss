@@ -6,6 +6,10 @@
     top:4em;
     right: -2rem;
     text-align: center;
+    
+    @include breakpoint(tablet){
+        right: -4rem;
+    }
     ul{
         list-style: none;
         padding: 0;
