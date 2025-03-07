@@ -1,0 +1,19 @@
+.main_nav{
+    display: none;
+    position: absolute;
+    width: 120%;
+    background-color: white;
+    top:4em;
+    right: -2rem;
+    text-align: center;
+    ul{
+        list-style: none;
+        padding: 0;
+        li{
+            padding: 10px;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}

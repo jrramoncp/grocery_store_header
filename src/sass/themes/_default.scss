@@ -6,7 +6,9 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem;
+    position: relative;
     max-width: $mobile-max-width;
+    font-family: $poppins-font;
     @include breakpoint(tablet){
         max-width: $tablet-max-width;
     }
@@ -16,4 +18,16 @@ body {
     @include breakpoint(desktop){
         max-width: $desktop-max-width;
     }
+}
+
+h1{
+    font-family: $montserrat-font;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+label{
+    @include label-styles()
 }
