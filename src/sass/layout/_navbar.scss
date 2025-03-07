@@ -10,15 +10,47 @@
     @include breakpoint(tablet){
         right: -4rem;
     }
+
+    @include breakpoint(laptop){
+        display: inline-block;
+        position:static;
+        width: 50%;
+    }
+
     ul{
         list-style: none;
         padding: 0;
+        @include breakpoint(laptop){
+            display: flex;
+            align-items: center;
+        }
+
         li{
             padding: 10px;
             a{
                 text-decoration: none;
                 font-size: 18px;
                 color: $red-color;
+
+                @include breakpoint(laptop){
+                    color: rgb($black-color, .55);
+                    font-weight: 500;
+                    &:hover{
+                        color: $red-color;
+                        position: relative;
+                        &::before{
+                            content: "";
+                            display: inline-block;
+                            width: 80%;
+                            height: 2px;
+                            background-color: $red-color;
+                            position: absolute;
+                            bottom: -10px;
+                            left: 10%;
+                            
+                        }
+                    }
+                }
             }
         }
     }

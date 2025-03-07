@@ -1,5 +1,8 @@
 .categories{
 
+    @include breakpoint(laptop){
+        display: flex;
+    }
     .categories_item{
         padding: 10px;
         display: flex;
@@ -7,6 +10,11 @@
         align-items: center;
         gap: 5px;
         margin-bottom: 20px;
+        @include breakpoint(laptop){
+            align-items: start;
+            padding: 20px;
+        }
+
         img{
             width: 70px;
             position: relative;
@@ -14,11 +22,19 @@
         }
         h3{
             text-align: center;
+            @include breakpoint(laptop){
+                text-align: start;
+                font-size: 14px;
+            }
         }
 
         p{
             text-align: center;
             color: $grey-color;
+            @include breakpoint(laptop){
+                text-align: start;
+                font-size: 0.8em;
+            }
         }
 
     }

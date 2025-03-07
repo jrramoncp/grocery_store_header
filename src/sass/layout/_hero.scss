@@ -1,4 +1,8 @@
 .hero{
+    @include breakpoint(laptop){
+        display: flex;
+        align-items: center;
+    }
     .hero_content{
         display: flex;
         flex-direction: column;
@@ -11,6 +15,13 @@
             span{
                 color: $red-color;
             }
+
+            @include breakpoint(laptop){
+                text-align: start;
+                padding-bottom: 0;
+                font-size: 3rem;
+                width: 70%;
+            }
         }
     
         .hero_description{
@@ -18,6 +29,11 @@
             color: $grey-color;
             padding-bottom: 10px;
             text-align: center;
+
+            @include breakpoint(laptop){
+                text-align: start;
+                font-size: 1.5rem;
+            }
         }  
     
         .hero_search{
@@ -29,6 +45,11 @@
                 width: 80%;
                 margin-right: auto;
                 margin-left: auto;
+            }
+
+            @include breakpoint(laptop){
+                width: 90%;
+                justify-content: start;
             }
 
             input{
@@ -48,7 +69,13 @@
                 padding: 5px;
                 border: none;
                 border-top-right-radius: 5px;
-                border-bottom-right-radius:5px;;
+                border-bottom-right-radius:5px;
+
+                @include breakpoint(laptop){
+                    &:hover{
+                        background-color: $grey-color;
+                    }
+                }
             }
     
         }
@@ -66,6 +93,16 @@
                     flex-wrap: wrap;
                     gap: 20px;
                 }
+
+                @include breakpoint(laptop){
+                    max-width: 60%;
+                    margin-left: 0;
+                    margin-bottom: auto;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                }   
 
                 li{
                     font-size: 18px;
@@ -95,6 +132,13 @@
             max-width: 100%;
             @include breakpoint(tablet){
                 max-width: 60%;
+            }
+
+            @include breakpoint(laptop){
+                max-width: 300px;
+                position: relative;
+                left: -30px;
+
             }
         }
     }

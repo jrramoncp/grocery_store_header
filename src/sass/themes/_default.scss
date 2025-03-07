@@ -16,6 +16,8 @@ body {
     }
     @include breakpoint(laptop){
         max-width: $laptop-max-width;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
     @include breakpoint(desktop){
         max-width: $desktop-max-width;
@@ -31,5 +33,12 @@ input[type="checkbox"]{
 }
 
 label{
-    @include label-styles()
+    @include label-styles();
+    @include breakpoint(laptop){
+        display:none;
+    }
+
+    @include breakpoint(desktop){
+        display: none;
+    }
 }
