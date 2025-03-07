@@ -1,5 +1,19 @@
-
-
 body {
     overflow-x: hidden;
 } 
+
+.page{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    max-width: $mobile-max-width;
+    @include breakpoint(tablet){
+        max-width: $tablet-max-width;
+    }
+    @include breakpoint(laptop){
+        max-width: $laptop-max-width;
+    }
+    @include breakpoint(desktop){
+        max-width: $desktop-max-width;
+    }
+}

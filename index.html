@@ -3,12 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    
     <title>Grocery Store Header</title>
   </head>
   <body>
     <div class="page">
+      <!-- HEADER -->
+      <header class="header">
+        <!-- LOGO -->
+        <a href="#"><img src="img/logo-finestmart.svg" alt="Logo from finesmart"></a>
+
+        <!-- MAIN NAV -->
+        <!-- nav button only for mobile -->
+        <input type="checkbox" id="nav-toggle">
+        <label for="nav-toggle"><span class="material-symbols-outlined">menu</span></label>
+        <nav class="main_nav">
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Sales</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- ASIDE LOGIN -->
+         <aside class="login">
+          <!-- cart icon -->
+          <a href="#" class="cart_icon"><img src="img/cart-icon.svg" alt=""></a>
+
+          <!-- login button only for mobile -->
+          <input type="checkbox" id="login-toggle">
+          <label for="login-toggle"><span class="material-symbols-outlined">login</span></label>
+          <ul class="login-links">
+            <li><a href="#">Sign In</a></li>
+            <li><a href="#" class="btn">Sign Up</a></li>
+          </ul>
+         </aside>
+      </header>
+      <main>
+        <!-- HERO -->
+        <section class="hero">
+          <div class="hero-content">
+            <h1 class="hero_title">Let your <span>groceries</span> come to you</h1>
+            <p class="hero_description">Get fresh groceries online without stepping out to make delicious food with the freshest ingredients</p>
+            <div class="hero_search">
+              <input type="text" placeholder="Search here">
+              <button><img src="/img/search-icon.svg" alt=""></button>
+            </div>
+          </div>
+
+          <!-- HERO IMG -->
+          <div class="hero_img">
+            <img src="img/man.png" alt="a man delivering groceries">
+          </div>
+
+        </section>
+
+        <!-- CATEGORIES SECTION -->
+        <section class="CATEGORIES">
+          <!-- CATEGORIES 1 -->
+          <article class="categories_item">
+            <img class="categories_item-img" src="img/dairy-icon.svg" alt="">
+            <h3 class="categories_item-title">Dairy Products</h3>
+            <p class="categories_item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </article>
+          
+          <!-- CATEGORIES 2 -->
+          <article class="categories_item">
+            <img class="categories_item-img" src="img/fruits-icon.svg" alt="">
+            <h3 class="categories_item-title">Vegetables & Fuits</h3>
+            <p class="categories_item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </article>
+          
+          <!-- CATEGORIES 3 -->
+          <article class="categories_item">
+            <img class="categories_item-img" src="img/condiments-icon.svg" alt="">
+            <h3 class="categories_item-title">Spices & Seasonings</h3>
+            <p class="categories_item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </article>
+          
+          <!-- CATEGORIES 4 -->
+          <article class="categories_item">
+            <img class="categories_item-img" src="img/food-icon.svg" alt="">
+            <h3 class="categories_item-title">Honey</h3>
+            <p class="categories_item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </article>
+          
+          <!-- CATEGORIES 5 -->
+          <article class="categories_item">
+            <img class="categories_item-img" src="img/grain-icon.svg" alt="">
+            <h3 class="categories_item-title">Flour</h3>
+            <p class="categories_item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </article>
+
+        </section>
+      </main>
 
     </div>
     <script type="module" src="/src/main.js"></script>
