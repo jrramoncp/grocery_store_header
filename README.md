@@ -70,6 +70,8 @@ Asegurate de tener Node.js instalado. Luego ejecuta:
 
 Una vez iniciado el servidor de desarrollo, podrás visualizar el encabezado del sitio web. Puedes personalizar los estilos y el contenido según las necesidades específicas de tu proyecto.
 
+También se encuentra desplegado en [GitHub Pages](https://jrramoncp.github.io/grocery_store_header/)
+
 ---
 
 ## Objetivo del Proyecto
