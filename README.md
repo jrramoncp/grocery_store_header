@@ -15,6 +15,7 @@
 ![Captura de pantalla del proyecto](img/screenshots/mobile_screenshot.png)
 
 **Tablet**
+
 ![Captura de pantalla del proyecto](img/screenshots/tablet_screenshot.png)
 
 
