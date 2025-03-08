@@ -21,6 +21,8 @@ body {
     }
     @include breakpoint(desktop){
         max-width: $desktop-max-width;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 

@@ -17,10 +17,21 @@
         width: 50%;
     }
 
+    @include breakpoint(desktop){
+        display: inline-block;
+        position:static;
+        width: 50%;
+    }
+
     ul{
         list-style: none;
         padding: 0;
         @include breakpoint(laptop){
+            display: flex;
+            align-items: center;
+        }
+
+        @include breakpoint(desktop){
             display: flex;
             align-items: center;
         }
@@ -33,23 +44,15 @@
                 color: $red-color;
 
                 @include breakpoint(laptop){
-                    color: rgb($black-color, .55);
-                    font-weight: 500;
-                    &:hover{
-                        color: $red-color;
-                        position: relative;
-                        &::before{
-                            content: "";
-                            display: inline-block;
-                            width: 80%;
-                            height: 2px;
-                            background-color: $red-color;
-                            position: absolute;
-                            bottom: -10px;
-                            left: 10%;
-                            
-                        }
-                    }
+                    color: $black-color;
+                    font-weight: 400;
+                    @include hover-nav-styles;
+                }
+
+                @include breakpoint(desktop){
+                    color: $black-color;
+                    font-weight: 400;
+                    @include hover-nav-styles;
                 }
             }
         }

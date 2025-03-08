@@ -24,6 +24,14 @@
 
     }
 
+    @include breakpoint(desktop){
+        padding-bottom: 20px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+
+    }
+
     // header img
     img{
         max-width: 150px;
@@ -32,6 +40,9 @@
         }
         @include breakpoint(laptop){
             max-width: 250px;
+        }
+        @include breakpoint(desktop){
+            max-width: 300px;
         }
     }
 
@@ -58,6 +69,12 @@
                 @include breakpoint(laptop){
                     margin: auto;
                 }
+
+                @include breakpoint(desktop){
+                    margin: auto;
+                    position: relative;
+                    top: 2px;
+                }
             }
         }
 
@@ -79,17 +96,20 @@
                     color: $red-color;
                     @include breakpoint(laptop){
                         font-size: 1rem;
-                        font-weight: 500;
+                        font-weight: 400;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                        @include button-styles();
+                    }
+                    @include breakpoint(desktop){
+                        font-weight: 400;
+                        @include button-styles();
+                        &:hover{
+                            text-decoration: underline;
+                        }
                         &.btn{
-                            display: inline-block;
-                            background-color: $red-color;
-                            color: white;
-                            padding: 5px 15px;
-                            border-radius: 5px;
-                            
-                            &:hover{
-                                background-color: rgb($grey-color, .80);
-                            }
+                            padding: 5px 25px; 
                         }
                     }
                 }
@@ -103,6 +123,13 @@
                 display: flex;
                 position: static;
                 align-items: center;
+            }
+
+            @include breakpoint(desktop){
+                display: flex;
+                position: static;
+                align-items: center;
+                gap: 25px;
             }
             
         }

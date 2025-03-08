@@ -3,6 +3,12 @@
     @include breakpoint(laptop){
         display: flex;
     }
+
+    @include breakpoint(desktop){
+        display: flex;
+        padding-top: 50px;
+        gap: 30px;
+    }
     .categories_item{
         padding: 10px;
         display: flex;
@@ -11,6 +17,11 @@
         gap: 5px;
         margin-bottom: 20px;
         @include breakpoint(laptop){
+            align-items: start;
+            padding: 20px;
+        }
+
+        @include breakpoint(desktop){
             align-items: start;
             padding: 20px;
         }
@@ -26,6 +37,10 @@
                 text-align: start;
                 font-size: 14px;
             }
+            @include breakpoint(desktop){
+                text-align: start;
+                font-size: 24px;
+            }
         }
 
         p{
@@ -34,6 +49,10 @@
             @include breakpoint(laptop){
                 text-align: start;
                 font-size: 0.8em;
+            }
+            @include breakpoint(desktop){
+                text-align: start;
+                font-size: 18px;
             }
         }
 

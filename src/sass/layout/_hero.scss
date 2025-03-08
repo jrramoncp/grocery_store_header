@@ -3,6 +3,11 @@
         display: flex;
         align-items: center;
     }
+    @include breakpoint(desktop){
+        display: flex;
+        align-items: center;
+        padding-top: 50px;
+    }
     .hero_content{
         display: flex;
         flex-direction: column;
@@ -22,6 +27,12 @@
                 font-size: 3rem;
                 width: 70%;
             }
+            @include breakpoint(desktop){
+                text-align: start;
+                padding-bottom: 0;
+                font-size: 3.5rem;
+                width: 70%;
+            }
         }
     
         .hero_description{
@@ -33,6 +44,11 @@
             @include breakpoint(laptop){
                 text-align: start;
                 font-size: 1.5rem;
+            }
+            @include breakpoint(desktop){
+                text-align: start;
+                font-size: 24px;
+                width: 70%;
             }
         }  
     
@@ -52,6 +68,11 @@
                 justify-content: start;
             }
 
+            @include breakpoint(desktop){
+                width: 60%;
+                justify-content: start;
+            }
+
             input{
                 max-width: 80%;
                 padding: 10px;
@@ -62,6 +83,13 @@
                 border-top-right-radius: 5px;
                 &::placeholder{
                     color: $grey-color;
+                }
+
+                @include breakpoint(desktop){
+                    padding: 20px;
+                    &::placeholder{
+                        font-size:18px ;
+                    }
                 }
             }
             button{
@@ -74,6 +102,13 @@
                 @include breakpoint(laptop){
                     &:hover{
                         background-color: $grey-color;
+                    }
+                }
+                @include breakpoint(desktop){
+                    padding: 12px;
+                    &:hover{
+                        background-color: $grey-color;
+                        
                     }
                 }
             }
@@ -103,6 +138,15 @@
                     flex-wrap: wrap;
                     gap: 20px;
                 }   
+
+                @include breakpoint(desktop){
+                    max-width: 60%;
+                    margin-left: 0;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                }
 
                 li{
                     font-size: 18px;
@@ -138,6 +182,12 @@
                 max-width: 300px;
                 position: relative;
                 left: -30px;
+
+            }
+
+            @include breakpoint(desktop){
+                position: relative;
+                left: -300px;
 
             }
         }
